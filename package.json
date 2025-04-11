@@ -1,0 +1,16 @@
+{
+  "name": "space-news",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "vite build && gh-pages -d dist"
+  },
+  "homepage": "https://themotka.github.io/space-news",
+  "dependencies": {
+    "vite": "^6.2.6"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
