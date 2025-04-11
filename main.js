@@ -7,7 +7,10 @@ async function fetchArticles() {
     const list = document.getElementById('articles');
     data.results.forEach(article => {
         const li = document.createElement('li');
-        li.innerHTML = `<a href="detail.html?id=${article.id}">${article.title}</a>`;
+        li.innerHTML = `
+      <a href="detail.html?id=${article.id}" class="article-link">${article.title}</a>
+      <span class="article-date">${new Date(article.published_at).toLocaleDateString()}</span>
+    `;
         list.appendChild(li);
     });
 }

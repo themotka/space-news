@@ -7,9 +7,10 @@ async function fetchDetail() {
     const res = await fetch(API_URL);
     const article = await res.json();
 
-    document.getElementById('title').innerText = article.title;
-    document.getElementById('summary').innerText = article.summary;
+    document.getElementById('title').textContent = article.title;
+    document.getElementById('summary').textContent = article.summary;
     document.getElementById('image').src = article.image_url;
+    document.getElementById('image').alt = article.title;
 }
 
 fetchDetail();
